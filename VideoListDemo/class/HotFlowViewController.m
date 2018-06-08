@@ -38,7 +38,7 @@
 
     [self.tableView registerClass:[VideoFullCell class] forCellReuseIdentifier:[VideoFullCell identifier]];
     self.tableView.pagingEnabled = YES;
-
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.extendedLayoutIncludesOpaqueBars = YES;
@@ -60,7 +60,7 @@
 }
 
 - (void)configPlayer {
-    self.playerView = [[PlayerView alloc] initWithFrame:self.view.frame];
+    self.playerView = [[PlayerView alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.playerView.playerStyle = PlayerStyleSizeRegularAuto;
     [self.view addSubview:self.playerView];
 
